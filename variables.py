@@ -1,0 +1,1 @@
+DATA_PATH ='/media/nipu/works/ai/TTS_Bn/datasets/bn_in'

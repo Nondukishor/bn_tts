@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/media/nipu/works/ai/TTS_Bn/train-ssrn.py", line 131, in <module>
+    train_epoch_loss = train(epoch, phase='train')
+  File "/media/nipu/works/ai/TTS_Bn/train-ssrn.py", line 80, in train
+    for batch in pbar:
+  File "/media/nipu/works/ai/TTS_Bn/venv/lib/python3.10/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/media/nipu/works/ai/TTS_Bn/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/media/nipu/works/ai/TTS_Bn/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "/media/nipu/works/ai/TTS_Bn/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "/media/nipu/works/ai/TTS_Bn/venv/lib/python3.10/site-packages/torch/_utils.py", line 644, in reraise
+    raise exception
+IndexError: Caught IndexError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/media/nipu/works/ai/TTS_Bn/venv/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/media/nipu/works/ai/TTS_Bn/venv/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/media/nipu/works/ai/TTS_Bn/venv/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/media/nipu/works/ai/TTS_Bn/datasets/lj_speech.py", line 71, in __getitem__
+    data['mels'] = np.load(os.path.join(self.path, 'mels', "%s.npy" % self.fnames[index]))
+IndexError: list index out of range
